@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhuzhou.dao.video.RecordStatusMapper">
+    <select id="getCountforRecord" resultType="com.zhuzhou.dto.video.RecordStatusResult">
+        SELECT * FROM (SELECT COUNT(*) noExecute FROM record_status WHERE phase_status = 0) t
+            , (SELECT COUNT(*) executed FROM record_status WHERE phase_status = 1) u
+            , (SELECT COUNT(*) executing FROM record_status WHERE phase_status = 3) k
+    </select>
+</mapper>

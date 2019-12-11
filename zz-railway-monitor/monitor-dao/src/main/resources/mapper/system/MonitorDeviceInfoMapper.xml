@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhuzhou.dao.system.MonitorDeviceInfoMapper">
+    <select id="getDeviceId" resultType="java.util.Map">
+        select device_id FROM monitor_device_info where is_delete = 0
+    </select>
+</mapper>

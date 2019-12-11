@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.zhuzhou.dao.statistic.StatisticMapper">
+    <sql id = "column">
+        COUNT(IF(cp.id = '1', p.illegal = 0, 0) OR NULL) AS 'phase1',COUNT(IF(cp.id = '2',
+        p.illegal = 0, 0) OR NULL) AS 'phase2',COUNT(IF(cp.id = '3', p.illegal = 0, 0) or null) AS
+        'phase3',COUNT(IF(cp.id = '4', p.illegal = 0, 0) or null) AS 'phase4',COUNT(IF(cp.id = '5', p.illegal = 0, 0) or
+        null) AS 'phase5',COUNT(IF(cp.id = '6', p.illegal = 0, 0) or null) AS 'phase6',COUNT(IF(cp.id = '7', p.illegal =
+        0, 0) or null) AS 'phase7',COUNT(IF(cp.id = '8', p.illegal = 0, 0) or null) AS 'phase8',COUNT(IF(cp.id = '9',
+        p.illegal = 0, 0) or null) AS 'phase9',COUNT(IF(cp.id = '10', p.illegal = 0, 0) or null) AS
+        'phase10',COUNT(IF(cp.id = '11', p.illegal = 0, 0) or null) AS 'phase11',COUNT(IF(cp.id = '12', p.illegal = 0,
+        0) or null) AS 'phase12',COUNT(IF(cp.id = '13', p.illegal = 0, 0) or null) AS 'phase13',COUNT(IF(cp.id = '14',
+        p.illegal = 0, 0) or null) AS 'phase14',COUNT(IF(cp.id = '15', p.illegal = 0, 0) or null) AS
+        'phase15',COUNT(IF(cp.id = '16', p.illegal = 0, 0) or null) AS 'phase16',COUNT(IF(cp.id = '17', p.illegal = 0,
+        0) or null) AS 'phase17',COUNT(IF(cp.id = '18', p.illegal = 0, 0) or null) AS 'phase18',COUNT(IF(cp.id = '19',
+        p.illegal = 0, 0) or null) AS 'phase19',COUNT(IF(cp.id = '20', p.illegal = 0, 0) or null) AS
+        'phase20',COUNT(IF(cp.id = '21', p.illegal = 0, 0) or null) AS 'phase21',COUNT(IF(cp.id = '22', p.illegal = 0,
+        0) or null) AS 'phase22',COUNT(IF(cp.id = '23', p.illegal = 0, 0) or null) AS 'phase23',COUNT(IF(cp.id = '24',
+        p.illegal = 0, 0) or null) AS 'phase24',COUNT(IF(cp.id = '25', p.illegal = 0, 0) or null) AS
+        'phase25',COUNT(IF(cp.id = '26', p.illegal = 0, 0) or null) AS 'phase26',COUNT(IF(cp.id = '27', p.illegal = 0,
+        0) or null) AS 'phase27',COUNT(IF(cp.id = '28', p.illegal = 0, 0) or null) AS 'phase28',COUNT(IF(cp.id = '29',
+        p.illegal = 0, 0) or null) AS 'phase29',COUNT(IF(cp.id = '30', p.illegal = 0, 0) or null) AS
+        'phase30',COUNT(IF(cp.id = '31', p.illegal = 0, 0) or null) AS 'phase31',COUNT(IF(cp.id = '32', p.illegal = 0,
+        0) or null) AS 'phase32',COUNT(IF(cp.id = '33', p.illegal = 0, 0) or null) AS 'phase33',COUNT(IF(cp.id = '34',
+        p.illegal = 0, 0) or null) AS 'phase34',COUNT(IF(cp.id = '35', p.illegal = 0, 0) or null) AS
+        'phase35',COUNT(IF(cp.id = '36', p.illegal = 0, 0) or null) AS 'phase36',COUNT(IF(cp.id = '37', p.illegal = 0,
+        0) or null) AS 'phase37',COUNT(IF(cp.id = '38', p.illegal = 0, 0) or null) AS 'phase38',COUNT(IF(cp.id = '39',
+        p.illegal = 0, 0) or null) AS 'phase39',COUNT(IF(cp.id = '40', p.illegal = 0, 0) or null) AS
+        'phase40',COUNT(IF(cp.id = '41', p.illegal = 0, 0) or null) AS 'phase41',COUNT(IF(cp.id = '42', p.illegal = 0,
+        0) or null) AS 'phase42',COUNT(IF(cp.id = '43', p.illegal = 0, 0) or null) AS 'phase43',COUNT(IF(cp.id = '44',
+        p.illegal = 0, 0) or null) AS 'phase44',COUNT(IF(cp.id = '45', p.illegal = 0, 0) or null) AS
+        'phase45',COUNT(IF(cp.id = '46', p.illegal = 0, 0) or null) AS 'phase46',COUNT(IF(cp.id = '47', p.illegal = 0,
+        0) or null) AS 'phase47',COUNT(IF(cp.id = '48', p.illegal = 0, 0) or null) AS 'phase48',COUNT(IF(cp.id = '49',
+        p.illegal = 0, 0) or null) AS 'phase49',COUNT(IF(cp.id = '50', p.illegal = 0, 0) or null) AS
+        'phase50',COUNT(IF(cp.id = '51', p.illegal = 0, 0) or null) AS 'phase51',COUNT(IF(cp.id = '52', p.illegal = 0,
+        0) or null) AS 'phase52',COUNT(IF(cp.id = '53', p.illegal = 0, 0) or null) AS 'phase53',COUNT(IF(cp.id = '54',
+        p.illegal = 0, 0) or null) AS 'phase54',COUNT(IF(cp.id = '55', p.illegal = 0, 0) or null) AS
+        'phase55',COUNT(IF(cp.id = '56', p.illegal = 0, 0) or null) AS 'phase56',COUNT(IF(cp.id = '57', p.illegal = 0,
+        0) or null) AS 'phase57',COUNT(IF(cp.id = '58', p.illegal = 0, 0) or null) AS 'phase58',COUNT(IF(cp.id = '59',
+        p.illegal = 0, 0) or null) AS 'phase59',COUNT(IF(cp.id = '60', p.illegal = 0, 0) or null) AS
+        'phase60',COUNT(IF(cp.id = '61', p.illegal = 0, 0) or null) AS 'phase61',COUNT(IF(cp.id = '62', p.illegal = 0,
+        0) or null) AS 'phase62',COUNT(IF(cp.id = '63', p.illegal = 0, 0) or null) AS 'phase63',COUNT(IF(cp.id = '64',
+        p.illegal = 0, 0) or null) AS 'phase64',COUNT(IF(cp.id = '65', p.illegal = 0, 0) or null) AS
+        'phase65',COUNT(IF(cp.id = '66', p.illegal = 0, 0) or null) AS 'phase66',COUNT(IF(cp.id = '67', p.illegal = 0,
+        0) or null) AS 'phase67',COUNT(IF(cp.id = '68', p.illegal = 0, 0) or null) AS 'phase68',COUNT(IF(cp.id = '69',
+        p.illegal = 0, 0) or null) AS 'phase69',COUNT(IF(cp.id = '70', p.illegal = 0, 0) or null) AS
+        'phase70',COUNT(IF(cp.id = '71', p.illegal = 0, 0) or null) AS 'phase71',COUNT(IF(cp.id = '72', p.illegal = 0,
+        0) or null) AS 'phase72',COUNT(IF(cp.id = '73', p.illegal = 0, 0) or null) AS 'phase73',COUNT(IF(cp.id = '74',
+        p.illegal = 0, 0) or null) AS 'phase74',COUNT(IF(cp.id = '75', p.illegal = 0, 0) or null) AS
+        'phase75',COUNT(IF(cp.id = '76', p.illegal = 0, 0) or null) AS 'phase76',COUNT(IF(cp.id = '77', p.illegal = 0,
+        0) or null) AS 'phase77',COUNT(IF(cp.id = '78', p.illegal = 0, 0) or null) AS 'phase78',COUNT(IF(cp.id = '79',
+        p.illegal = 0, 0) or null) AS 'phase79',COUNT(IF(cp.id = '80', p.illegal = 0, 0) or null) AS
+        'phase80',COUNT(IF(cp.id = '81', p.illegal = 0, 0) or null) AS 'phase81',COUNT(IF(cp.id = '82', p.illegal = 0,
+        0) or null) AS 'phase82',COUNT(IF(cp.id = '83', p.illegal = 0, 0) or null) AS 'phase83',COUNT(IF(cp.id = '84',
+        p.illegal = 0, 0) or null) AS 'phase84',COUNT(IF(cp.id = '85', p.illegal = 0, 0) or null) AS
+        'phase85',COUNT(IF(cp.id = '86', p.illegal = 0, 0) or null) AS 'phase86',COUNT(IF(cp.id = '87', p.illegal = 0,
+        0) or null) AS 'phase87',COUNT(IF(cp.id = '88', p.illegal = 0, 0) or null) AS 'phase88',COUNT(IF(cp.id = '89',
+        p.illegal = 0, 0) or null) AS 'phase89',COUNT(IF(cp.id = '90', p.illegal = 0, 0) or null) AS
+        'phase90',COUNT(IF(cp.id = '91', p.illegal = 0, 0) or null) AS 'phase91',COUNT(IF(cp.id = '92', p.illegal = 0,
+        0) or null) AS 'phase92',COUNT(IF(cp.id = '93', p.illegal = 0, 0) or null) AS 'phase93',COUNT(IF(cp.id = '94',
+        p.illegal = 0, 0) or null) AS 'phase94',COUNT(IF(cp.id = '95', p.illegal = 0, 0) or null) AS
+        'phase95',COUNT(IF(cp.id = '96', p.illegal = 0, 0) or null) AS 'phase96',COUNT(IF(cp.id = '97', p.illegal = 0,
+        0) or null) AS 'phase97',COUNT(IF(cp.id = '98', p.illegal = 0, 0) or null) AS 'phase98',COUNT(IF(cp.id = '99',
+        p.illegal = 0, 0) or null) AS 'phase99',COUNT(IF(cp.id = '100', p.illegal = 0, 0) or null) AS
+        'phase100',COUNT(IF(cp.id = '101', p.illegal = 0, 0) or null) AS 'phase101',COUNT(IF(cp.id = '102', p.illegal =
+        0, 0) or null) AS 'phase102',COUNT(IF(cp.id = '103', p.illegal = 0, 0) or null) AS 'phase103',COUNT(IF(cp.id =
+        '104', p.illegal = 0, 0) or null) AS 'phase104',COUNT(IF(cp.id = '105', p.illegal = 0, 0) or null) AS
+        'phase105',COUNT(IF(cp.id = '106', p.illegal = 0, 0) or null) AS 'phase106',COUNT(IF(cp.id = '107', p.illegal =
+        0, 0) or null) AS 'phase107',COUNT(IF(cp.id = '108', p.illegal = 0, 0) or null) AS 'phase108',COUNT(IF(cp.id =
+        '109', p.illegal = 0, 0) or null) AS 'phase109',COUNT(IF(cp.id = '110', p.illegal = 0, 0) or null) AS
+        'phase110',COUNT(IF(cp.id = '111', p.illegal = 0, 0) or null) AS 'phase111',COUNT(IF(cp.id = '112', p.illegal =
+        0, 0) or null) AS 'phase112',COUNT(IF(cp.id = '113', p.illegal = 0, 0) or null) AS 'phase113',COUNT(IF(cp.id =
+        '114', p.illegal = 0, 0) or null) AS 'phase114',COUNT(IF(cp.id = '115', p.illegal = 0, 0) or null) AS
+        'phase115',COUNT(IF(cp.id = '116', p.illegal = 0, 0) or null) AS 'phase116',COUNT(IF(cp.id = '117', p.illegal =
+        0, 0) or null) AS 'phase117',COUNT(IF(cp.id = '118', p.illegal = 0, 0) or null) AS 'phase118',COUNT(IF(cp.id =
+        '119', p.illegal = 0, 0) or null) AS 'phase119',COUNT(IF(cp.id = '120', p.illegal = 0, 0) or null) AS
+        'phase120',COUNT(IF(cp.id = '121', p.illegal = 0, 0) or null) AS 'phase121',COUNT(IF(cp.id = '122', p.illegal =
+        0, 0) or null) AS 'phase122',COUNT(IF(cp.id = '123', p.illegal = 0, 0) or null) AS 'phase123',COUNT(IF(cp.id =
+        '124', p.illegal = 0, 0) or null) AS 'phase124',COUNT(IF(cp.id = '125', p.illegal = 0, 0) or null) AS
+        'phase125',COUNT(IF(cp.id = '126', p.illegal = 0, 0) or null) AS 'phase126',COUNT(IF(cp.id = '127', p.illegal =
+        0, 0) or null) AS 'phase127',COUNT(IF(cp.id = '128', p.illegal = 0, 0) or null) AS 'phase128',COUNT(IF(cp.id =
+        '129', p.illegal = 0, 0) or null) AS 'phase129',COUNT(IF(cp.id = '130', p.illegal = 0, 0) or null) AS
+        'phase130',COUNT(IF(cp.id = '131', p.illegal = 0, 0) or null) AS 'phase131',COUNT(IF(cp.id = '132', p.illegal =
+        0, 0) or null) AS 'phase132',COUNT(IF(cp.id = '133', p.illegal = 0, 0) or null) AS 'phase133',COUNT(IF(cp.id =
+        '134', p.illegal = 0, 0) or null) AS 'phase134',COUNT(IF(cp.id = '135', p.illegal = 0, 0) or null) AS
+        'phase135',COUNT(IF(cp.id = '136', p.illegal = 0, 0) or null) AS 'phase136',COUNT(IF(cp.id = '137', p.illegal =
+        0, 0) or null) AS 'phase137',COUNT(IF(cp.id = '138', p.illegal = 0, 0) or null) AS 'phase138',COUNT(IF(cp.id =
+        '139', p.illegal = 0, 0) or null) AS 'phase139',COUNT(IF(cp.id = '140', p.illegal = 0, 0) or null) AS
+        'phase140',COUNT(IF(cp.id = '141', p.illegal = 0, 0) or null) AS 'phase141',COUNT(IF(cp.id = '142', p.illegal =
+        0, 0) or null) AS 'phase142',COUNT(IF(cp.id = '143', p.illegal = 0, 0) or null) AS 'phase143',COUNT(IF(cp.id =
+        '144', p.illegal = 0, 0) or null) AS 'phase144',COUNT(IF(cp.id = '145', p.illegal = 0, 0) or null) AS
+        'phase145',COUNT(IF(cp.id = '146', p.illegal = 0, 0) or null) AS 'phase146',COUNT(IF(cp.id = '147', p.illegal =
+        0, 0) or null) AS 'phase147',COUNT(IF(cp.id = '148', p.illegal = 0, 0) or null) AS 'phase148',COUNT(IF(cp.id =
+        '149', p.illegal = 0, 0) or null) AS 'phase149',COUNT(IF(cp.id = '150', p.illegal = 0, 0) or null) AS
+        'phase150',COUNT(IF(cp.id = '151', p.illegal = 0, 0) or null) AS 'phase151',COUNT(IF(cp.id = '152', p.illegal =
+        0, 0) or null) AS 'phase152',COUNT(IF(cp.id = '153', p.illegal = 0, 0) or null) AS 'phase153',COUNT(IF(cp.id =
+        '154', p.illegal = 0, 0) or null) AS 'phase154',COUNT(IF(cp.id = '155', p.illegal = 0, 0) or null) AS
+        'phase155',COUNT(IF(cp.id = '156', p.illegal = 0, 0) or null) AS 'phase156',COUNT(IF(cp.id = '157', p.illegal =
+        0, 0) or null) AS 'phase157',COUNT(IF(cp.id = '158', p.illegal = 0, 0) or null) AS 'phase158',COUNT(IF(cp.id =
+        '159', p.illegal = 0, 0) or null) AS 'phase159',COUNT(IF(cp.id = '160', p.illegal = 0, 0) or null) AS
+        'phase160',COUNT(IF(cp.id = '161', p.illegal = 0, 0) or null) AS 'phase161',COUNT(IF(cp.id = '162', p.illegal =
+        0, 0) or null) AS 'phase162',COUNT(IF(cp.id = '163', p.illegal = 0, 0) or null) AS 'phase163',COUNT(IF(cp.id =
+        '164', p.illegal = 0, 0) or null) AS 'phase164',COUNT(IF(cp.id = '165', p.illegal = 0, 0) or null) AS
+        'phase165',COUNT(IF(cp.id = '166', p.illegal = 0, 0) or null) AS 'phase166',COUNT(IF(cp.id = '167', p.illegal =
+        0, 0) or null) AS 'phase167',COUNT(IF(cp.id = '168', p.illegal = 0, 0) or null) AS 'phase168',COUNT(IF(cp.id =
+        '169', p.illegal = 0, 0) or null) AS 'phase169',COUNT(IF(cp.id = '170', p.illegal = 0, 0) or null) AS 'phase170'
+    </sql>
+
+    <select id = "todayDriver" resultType = "int">
+        SELECT COUNT(1) FROM lkj_index WHERE driver_date = DATE_FORMAT(now(), '%y-%m-%d')
+    </select>
+
+    <select id = "nearlyWeekRailNumber" resultType = "com.zhuzhou.entity.statistic.NearlyWeekDateNumber">
+        SELECT DATE_FORMAT(l.driver_date,'%Y-%m-%d') driver_date,COUNT(1) num FROM lkj_index l
+        WHERE TIMESTAMPDIFF(DAY,driver_date,CURRENT_DATE) &lt;= 7
+        GROUP BY driver_date
+    </select>
+    <select id = "nearlyWeekPhaseNumber" resultType = "com.zhuzhou.entity.statistic.NearlyWeekDateNumber">
+        SELECT DATE_FORMAT(l.driver_date,'%Y-%m-%d') driver_date,COUNT(1) num FROM lkj_index l LEFT JOIN phase p ON l.id = p.record_id
+        WHERE TIMESTAMPDIFF(DAY,l.driver_date,CURRENT_DATE) &lt;= 7
+        GROUP BY l.driver_date
+    </select>
+
+    <select id = "nearlyWeekIllegalPhaseNumber" resultType = "com.zhuzhou.entity.statistic.NearlyWeekDateNumber">
+        SELECT DATE_FORMAT(l.driver_date,'%Y-%m-%d') driver_date,COUNT(1) num FROM lkj_index l LEFT JOIN phase p ON l.id = p.record_id AND p.illegal = 0
+        WHERE TIMESTAMPDIFF(DAY,l.driver_date,CURRENT_DATE) &lt;= 7
+        GROUP BY l.driver_date
+    </select>
+
+    <select id = "nearlyWeekIllegalGestureNumber" resultType = "com.zhuzhou.entity.statistic.NearlyWeekDateNumber">
+        SELECT DATE_FORMAT(l.driver_date,'%Y-%m-%d') driver_date,COUNT(1) num FROM lkj_index l LEFT JOIN phase p ON l.id = p.record_id AND p.code = 'H' AND p.illegal = 0
+        WHERE TIMESTAMPDIFF(DAY,l.driver_date,CURRENT_DATE) &lt;= 7
+        GROUP BY l.driver_date
+    </select>
+
+    <select id = "nearlyWeekGestureAnalysis" resultType = "com.zhuzhou.entity.statistic.NearlyWeekGestureAnalysis">
+        SELECT DATE_FORMAT(l.driver_date,'%Y-%m-%d') driver_date,COUNT(1) gesture_phase,COUNT(p.illegal = 2 OR NULL) miss,COUNT(p.illegal = 3 OR NULL) normal,
+        COUNT(p.illegal = 1 OR NULL) undispose,COUNT(p.illegal = 0 OR NULL) illegal
+        FROM lkj_index l LEFT JOIN phase p ON l.id = p.record_id AND p.code = 'H'
+        WHERE TIMESTAMPDIFF(DAY,l.driver_date,CURRENT_DATE) &lt;= 7
+        GROUP BY l.driver_date
+    </select>
+
+    <select id = "oneRailAnalysis" resultType = "com.zhuzhou.entity.statistic.OneRailAnalysis">
+        SELECT DATE_FORMAT(l.driver_date,'%Y-%m-%d') driver_date,p.phase_id,p.name,COUNT(p.phase_id)
+        count,c.score,sum(c.score) totalPoints
+        FROM phase p INNER JOIN config_phase c ON p.phase_id = c.id
+        INNER JOIN lkj_index l ON p.record_id = l.id AND p.illegal = 0
+        WHERE
+        <choose>
+            <when test = "page.recordId != null and page.recordId !='' ">
+                p.record_id = #{page.recordId}
+            </when>
+            <otherwise>
+                TIMESTAMPDIFF(DAY,l.driver_date,CURRENT_DATE) &lt;= 7
+            </otherwise>
+        </choose>
+        GROUP BY l.driver_name,p.phase_id
+    </select>
+
+    <select id = "railStatistic" resultType = "com.zhuzhou.entity.statistic.RailStatistic">
+        SELECT l.id,DATE_FORMAT(l.driver_date,'%Y-%m-%d')
+        driver_date,l.train_num,l.train_type,l.origin_station,l.terminus,l.motor_num,
+        l.driver_num,l.driver_name,l.assis_driver_num,assis_driver_name,f.phaseNum ,f.illegalNum
+        FROM lkj_index l
+        LEFT OUTER JOIN
+        (SELECT p.record_id,count(1) phaseNum,count(illegal = 0 OR NULL) illegalNum FROM phase p
+        GROUP BY p.record_id) f ON l.id = f.record_id
+        WHERE
+        <choose>
+            <when test = "page.startTime!=null and page.startTime != '' and page.endTime!=null and page.endTime != '' ">
+                l.driver_date BETWEEN #{page.startTime} AND #{page.endTime}
+            </when>
+            <otherwise>
+                TIMESTAMPDIFF(DAY,l.driver_date,CURRENT_DATE) &lt;= 7
+            </otherwise>
+        </choose>
+        ORDER BY l.driver_date
+    </select>
+
+    <select id = "driverStatistic" resultType = "com.zhuzhou.entity.statistic.DriverPhasesStatistic">
+        SELECT l.driver_num job_num,IFNULL(cs.name,l.driver_num) name,
+        <if test = "page.type != null and page.type != ''">
+            '${page.type}' type,
+        </if>
+        -- 默认按月
+        <if test = 'page.type == null or page.type == ""'>
+            'month' type,
+        </if>
+        <if test = 'page.type =="year"'>
+            DATE_FORMAT(l.driver_date,'%Y-01-01') typeValue,
+        </if>
+        <if test = 'page.type =="month" or page.type == null or page.type == ""'>
+            DATE_FORMAT(l.driver_date,'%Y-%m-01') typeValue,
+        </if>
+        <if test = 'page.type == "week"'>
+            SUBDATE(l.driver_date,DATE_FORMAT(l.driver_date,'%w')-1) typeValue,
+        </if>
+        <include refid = "column"/>
+        FROM phase p
+        LEFT JOIN lkj_index l ON l.id = p.record_id AND p.illegal = 0
+        LEFT JOIN config_steward cs ON cs.job_num = l.driver_num
+        LEFT JOIN config_phase cp ON cp.id = p.phase_id
+        <where>
+            p.illegal = 0
+            <if test = "page.jobNum != null and page.jobNum != ''">
+                AND cs.job_num like concat('%',#{page.jobNum},'%')
+            </if>
+            <if test = "page.name != null and page.name != ''">
+                AND cs.name like concat('%',#{page.name},'%')
+            </if>
+            <if test = 'page.typeValue != null and page.typeValue != ""'>
+                <if test = 'page.type == "year"'>
+                    AND DATE_FORMAT(l.driver_date,'%y') = DATE_FORMAT(#{page.typeValue},'%y')
+                </if>
+                <if test = 'page.type == "month"'>
+                    AND DATE_FORMAT(l.driver_date,'%y%m') = DATE_FORMAT(#{page.typeValue},'%y%m')
+                </if>
+                <if test = 'page.type == "week"'>
+                    AND DATE_FORMAT(l.driver_date,'%y%U') = DATE_FORMAT(#{page.typeValue},'%y%U')
+                </if>
+            </if>
+        </where>
+        GROUP BY
+        <if test = "page.type != null and page.type != ''">
+            <if test = 'page.type != "year"'>
+                YEAR(l.driver_date),
+            </if>
+            ${page.type}(l.driver_date),
+        </if>
+        <if test = 'page.type == null or page.type == ""'>
+            YEAR(l.driver_date),MONTH(l.driver_date),
+        </if>
+        cs.job_num
+        ORDER BY l.driver_date DESC
+    </select>
+
+    <select id = "workshopStatistic" resultType = "com.zhuzhou.entity.statistic.PhasesStatistic">
+        SELECT IFNULL(cs.workshop,"其他") name,
+        <if test = "page.type != null and page.type != ''">
+            '${page.type}' type,
+        </if>
+        <if test = 'page.type == null or page.type == ""'>
+            'month' type,
+        </if>
+        <if test = 'page.type =="year"'>
+            DATE_FORMAT(l.driver_date,'%Y-01-01') typeValue,
+        </if>
+        <if test = 'page.type =="month" or page.type == null or page.type == ""'>
+            DATE_FORMAT(l.driver_date,'%Y-%m-01') typeValue,
+        </if>
+        <if test = 'page.type == "week"'>
+            SUBDATE(l.driver_date,DATE_FORMAT(l.driver_date,'%w')-1) typeValue,
+        </if>
+        <include refid = "column"/>
+        FROM phase p
+        LEFT JOIN lkj_index l ON l.id = p.record_id AND p.illegal = 0
+        LEFT JOIN config_steward cs ON cs.job_num = l.driver_num
+        LEFT JOIN config_phase cp ON cp.id = p.phase_id
+        <where>
+            p.illegal = 0
+            <if test = "page.name != null and page.name != ''">
+                AND cs.workshop like concat('%',#{page.name},'%')
+            </if>
+            <if test = 'page.typeValue != null and page.typeValue != ""'>
+                <if test = 'page.type == "year"'>
+                    AND DATE_FORMAT(l.driver_date,'%y') = DATE_FORMAT(#{page.typeValue},'%y')
+                </if>
+                <if test = 'page.type == "month"'>
+                    AND DATE_FORMAT(l.driver_date,'%y%m') = DATE_FORMAT(#{page.typeValue},'%y%m')
+                </if>
+                <if test = 'page.type == "week"'>
+                    AND DATE_FORMAT(l.driver_date,'%y%U') = DATE_FORMAT(#{page.typeValue},'%y%U')
+                </if>
+            </if>
+        </where>
+        GROUP BY
+        <if test = "page.type != null and page.type != ''">
+            <if test = 'page.type != "year"'>
+                YEAR(l.driver_date),
+            </if>
+            ${page.type}(l.driver_date),
+        </if>
+        <if test = 'page.type == null or page.type == ""'>
+            YEAR(l.driver_date),MONTH(l.driver_date),
+        </if>
+        cs.workshop
+        ORDER BY l.driver_date DESC
+    </select>
+
+    <select id = "locomotiveDepotStatistic" resultType = "com.zhuzhou.entity.statistic.PhasesStatistic">
+        SELECT IFNULL(cs.locomotive_depot,"其他") name,
+        <if test = "page.type != null and page.type != ''">
+            '${page.type}' type,
+        </if>
+        <if test = 'page.type == null or page.type == ""'>
+            'month' type,
+        </if>
+        <if test = 'page.type =="year"'>
+            DATE_FORMAT(l.driver_date,'%Y-01-01') typeValue,
+        </if>
+        <if test = 'page.type =="month" or page.type == null or page.type == ""'>
+            DATE_FORMAT(l.driver_date,'%Y-%m-01') typeValue,
+        </if>
+        <if test = 'page.type == "week"'>
+            SUBDATE(l.driver_date,DATE_FORMAT(l.driver_date,'%w')-1) typeValue,
+        </if>
+        <include refid = "column"/>
+        FROM phase p
+        LEFT JOIN lkj_index l ON l.id = p.record_id AND p.illegal = 0
+        LEFT JOIN config_steward cs ON cs.job_num = l.driver_num
+        LEFT JOIN config_phase cp ON cp.id = p.phase_id
+        <where>
+            p.illegal = 0
+            <if test = "page.name != null and page.name != ''">
+                AND cs.locomotive_depot like concat('%',#{page.name},'%')
+            </if>
+            <if test = 'page.typeValue != null and page.typeValue != ""'>
+                <if test = 'page.type == "year"'>
+                    AND DATE_FORMAT(l.driver_date,'%y') = DATE_FORMAT(#{page.typeValue},'%y')
+                </if>
+                <if test = 'page.type == "month"'>
+                    AND DATE_FORMAT(l.driver_date,'%y%m') = DATE_FORMAT(#{page.typeValue},'%y%m')
+                </if>
+                <if test = 'page.type == "week"'>
+                    AND DATE_FORMAT(l.driver_date,'%y%U') = DATE_FORMAT(#{page.typeValue},'%y%U')
+                </if>
+            </if>
+        </where>
+        GROUP BY
+        <if test = "page.type != null and page.type != ''">
+            <if test = 'page.type != "year"'>
+                YEAR(l.driver_date),
+            </if>
+            ${page.type}(l.driver_date),
+        </if>
+        <if test = 'page.type == null or page.type == ""'>
+            YEAR(l.driver_date),MONTH(l.driver_date),
+        </if>
+        cs.locomotive_depot
+        ORDER BY l.driver_date DESC
+    </select>
+
+    <select id = "railwayStatistic" resultType = "com.zhuzhou.entity.statistic.PhasesStatistic">
+        SELECT IFNULL(cs.railway,"其他") name,
+        <if test = "page.type != null and page.type != ''">
+            '${page.type}' type,
+        </if>
+        <if test = 'page.type == null or page.type == ""'>
+            'month' type,
+        </if>
+        <if test = 'page.type =="year"'>
+            DATE_FORMAT(l.driver_date,'%Y-01-01') typeValue,
+        </if>
+        <if test = 'page.type =="month" or page.type == null or page.type == ""'>
+            DATE_FORMAT(l.driver_date,'%Y-%m-01') typeValue,
+        </if>
+        <if test = 'page.type == "week"'>
+            SUBDATE(l.driver_date,DATE_FORMAT(l.driver_date,'%w')-1) typeValue,
+        </if>
+        <include refid = "column"/>
+        FROM phase p
+        LEFT JOIN lkj_index l ON l.id = p.record_id AND p.illegal = 0
+        LEFT JOIN config_steward cs ON cs.job_num = l.driver_num
+        LEFT JOIN config_phase cp ON cp.id = p.phase_id
+        <where>
+            p.illegal = 0
+            <if test = "page.name != null and page.name != ''">
+                AND cs.railway like concat('%',#{page.name},'%')
+            </if>
+            <if test = 'page.typeValue != null and page.typeValue != ""'>
+                <if test = 'page.type == "year"'>
+                    AND DATE_FORMAT(l.driver_date,'%y') = DATE_FORMAT(#{page.typeValue},'%y')
+                </if>
+                <if test = 'page.type == "month"'>
+                    AND DATE_FORMAT(l.driver_date,'%y%m') = DATE_FORMAT(#{page.typeValue},'%y%m')
+                </if>
+                <if test = 'page.type == "week"'>
+                    AND DATE_FORMAT(l.driver_date,'%y%U') = DATE_FORMAT(#{page.typeValue},'%y%U')
+                </if>
+            </if>
+        </where>
+        GROUP BY
+        <if test = "page.type != null and page.type != ''">
+            <if test = 'page.type != "year"'>
+                YEAR(l.driver_date),
+            </if>
+            ${page.type}(l.driver_date),
+        </if>
+        <if test = 'page.type == null or page.type == ""'>
+            YEAR(l.driver_date),MONTH(l.driver_date),
+        </if>
+        cs.railway
+        ORDER BY l.driver_date DESC
+    </select>
+</mapper>

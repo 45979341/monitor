@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.zhuzhou.dao.video.IdxIndexMapper">
+
+    <!-- 获取无lkj文件的idx_index，可做查看视频入口 -->
+    <select id = "idxIndexNone" parameterType = "idxIndex" resultType = "idxIndex">
+        SELECT * FROM idx_index i
+        <where>
+            NOT EXISTS (SELECT id FROM lkj_index l WHERE i.record_id = l.id)
+            <if test = "i.driverNum != null and i.driverNum != ''">
+                and driver_num like "%"#{i.driverNum}"%"
+            </if>
+            <if test = "i.driverName != null and i.driverName != ''">
+                and driver_name like "%"#{i.driverName}"%"
+            </if>
+            <if test = "i.cabNum != null and i.cabNum != ''">
+                and cab_num like "%"#{i.cabNum}"%"
+            </if>
+            <if test = "i.trainNum != null and i.trainNum != ''">
+                and train_num like "%"#{i.trainNum}"%"
+            </if>
+        </where>
+        limit #{offset}, #{size}
+    </select>
+
+    <!-- 获取无lkj文件的idx_index，可做查看视频入口 -->
+    <select id = "idxIndexNoneCount" parameterType = "idxIndex" resultType = "long">
+        SELECT COUNT(*) FROM idx_index i
+        <where>
+            NOT EXISTS (SELECT id FROM lkj_index l WHERE i.record_id = l.id)
+            <if test = "driverNum != null and driverNum != ''">
+                and driver_num like "%"#{driverNum}"%"
+            </if>
+            <if test = "driverName != null and driverName != ''">
+                and driver_name like "%"#{driverName}"%"
+            </if>
+            <if test = "cabNum != null and cabNum != ''">
+                and cab_num like "%"#{cabNum}"%"
+            </if>
+            <if test = "trainNum != null and trainNum != ''">
+                and train_num like "%"#{trainNum}"%"
+            </if>
+        </where>
+    </select>
+
+    <select id = "index" resultType = "com.zhuzhou.entity.lkj.LkjIndex">
+        SELECT l.*,i.*,if(i.id,1,0) isVideo,r.phase_status phaseStatus
+        FROM lkj_index l
+        LEFT JOIN idx_index i ON l.id = i.record_id
+        LEFT JOIN record_status r ON l.id = r.record_id
+        <where>
+            <if test = "driverNum != null and driverNum != ''">
+                AND l.driver_num LIKE CONCAT("%",#{driverNum},"%")
+            </if>
+            <if test = "driverName != null and driverName != ''">
+                AND l.driver_name LIKE CONCAT("%",#{driverName},"%")
+            </if>
+            <if test = "trainNum != null and trainNum != ''">
+                AND l.train_num LIKE CONCAT("%",#{trainNum},"%")
+            </if>
+            <if test = "trainType != null and trainType != ''">
+                AND l.train_type LIKE CONCAT("%",#{trainType},"%")
+            </if>
+            <if test = "motorNum != null and motorNum != ''">
+                AND l.motor_num LIKE CONCAT("%",#{motorNum},"%")
+            </if>
+            <if test='video == "1"'>
+                AND i.id IS NOT NULL
+            </if>
+            <if test='video == "0"'>
+                AND i.id IS NULL
+            </if>
+            <if test = "startTime != null and startTime != '' and endTime != null and endTime != '' ">
+                AND l.create_time BETWEEN #{startTime} AND #{endTime}
+            </if>
+            <if test = "phaseStatus != null">
+                AND r.phase_status = #{phaseStatus}
+            </if>
+        </where>
+        ORDER BY l.driver_date desc
+    </select>
+
+</mapper>

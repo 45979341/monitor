@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="monitor-aop" />
+        <module name="monitor-controller" />
+        <module name="monitor-dao" />
+        <module name="monitor-impl" />
+        <module name="monitor-model" />
+        <module name="monitor-push" />
+        <module name="monitor-spi" />
+        <module name="railway-controller" />
+        <module name="railway-dao" />
+        <module name="railway-impl" />
+        <module name="railway-model" />
+        <module name="railway-phase" />
+        <module name="railway-spi" />
+        <module name="zz-mybaits-plus-generator" />
+        <module name="zz-railway-framework" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="job-controller" target="1.8" />
+      <module name="job-dao" target="1.8" />
+      <module name="job-impl" target="1.8" />
+      <module name="job-model" target="1.8" />
+      <module name="job-spi" target="1.8" />
+      <module name="railway-controller-task" target="1.8" />
+      <module name="railway-dao-phase" target="1.8" />
+      <module name="railway-impl-phase" target="1.8" />
+      <module name="railway-model-phase" target="1.8" />
+      <module name="railway-spi-phase" target="1.8" />
+      <module name="zz-railway-job" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,86 @@
+###################  spring配置  ###################
+spring:
+  # 数据库配置
+  datasource:
+    url: jdbc:mysql://192.168.10.94:3306/haulage_motor?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2b8
+    username: root
+    password: bYb123456.
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      max-active: 50
+      initial-size: 1
+      max-wait: 60000
+      min-idle: 20
+      remove-abandoned: true
+      remove-abandoned-timeout: 600
+      connection-properties: clientEncoding=UTF-8
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    async:
+      #接口请求时长。超过20s丢弃
+      request-timeout: 20000
+    favicon:
+      enabled: false
+################### redis 配置 ###################
+  redis:
+    host: 192.168.10.9
+    port: 6379
+    password: ''
+    jedis:
+      pool:
+        max-active: 30
+        max-wait: 100
+        max-idle: 30
+        min-idle: 5
+    timeout: 6000
+    # 0-15
+    database: 1
+  cache:
+    packages: com.zhuzhou.spi
+  # spring-session 配置
+  session:
+    store-type: redis
+    timeout: 1800
+  servlet:
+    multipart:
+      max-request-size: 10000MB
+      max-file-size: 10000MB
+      location: /home/haulage_motor/tempfile
+###################  mybatis配置  ###################
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.zhuzhou.entity, com.zhuzhou.form, com.zhuzhou.bo, com.zhuzhou.vo
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+# 打印sql
+logging:
+  level:
+     com.byb.dao : DEBUG
+     com.byb.service: INFO
+  file: /home/haulage_motor/log
+server:
+  port: 8282
+  tomcat:
+      # 最大连接数
+      max-connections: 250
+      max-threads: 1000
+  #设置连接时间
+  servlet:
+    session:
+      #一天
+      timeout: P1D
+############### 基本信息配置 ####################
+url:
+  idx: 'http://192.168.10.248:6002/api/Parse/Idx'
+  lkj: 'http://192.168.10.248:6002/api/Parse/LKJ'
+file:
+  source: /home/haulage_motor/photo/source
+  hand: /home/haulage_motor/photo/hand
+  cover: /home/haulage_motor/photo/cover
+  machineroom: /home/haulage_motor/photo/machineroom
+  uri: 'http://192.168.10.63:${server.port}'
+  pool:
+    size: 10

@@ -1,0 +1,1 @@
+update item_record set illegal_stand = 4 where illegal_stand= 5

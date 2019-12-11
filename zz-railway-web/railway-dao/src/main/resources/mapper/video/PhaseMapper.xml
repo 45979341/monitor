@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhuzhou.dao.video.PhaseMapper">
+
+    <select id="findIllegalScore" parameterType="list" resultType="phaseAnalysis">
+        SELECT record_id as recordId, SUM(c.score) as score FROM config_phase c
+        INNER JOIN phase p ON c.id = p.phase_id
+        WHERE p.record_id in
+        <foreach collection="list" item="item" open="(" close=")" separator=",">
+          #{item}
+        </foreach>
+        AND p.illegal = 0
+        group by p.record_id
+    </select>
+
+    <select id="findList" parameterType="phaseListForm" resultType="phase">
+        select p.*, IF(i.id != '', true, false) as phaseSign from phase p
+        left join idx_analysis_log i on i.phase_id = p.id
+        where p.record_id = #{recordId} and p.code = #{code}
+        order by start_time
+    </select>
+</mapper>

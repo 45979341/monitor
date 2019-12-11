@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-mybaits-plus-generator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-framework" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-job" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-job/job-controller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-job/job-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-job/job-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-job/job-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-job/job-spi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-monitor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-monitor/monitor-aop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-monitor/monitor-controller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-monitor/monitor-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-monitor/monitor-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-monitor/monitor-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-monitor/monitor-push" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-monitor/monitor-spi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-web/railway-controller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-web/railway-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-web/railway-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-web/railway-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-web/railway-phase" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zz-railway-web/railway-spi" charset="UTF-8" />
+  </component>
+</project>

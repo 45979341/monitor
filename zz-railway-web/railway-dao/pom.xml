@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>zz-railway-web</artifactId>
+        <groupId>com.zhuzhou</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>railway-dao</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.zhuzhou</groupId>
+            <artifactId>railway-model</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+    </dependencies>
+</project>
